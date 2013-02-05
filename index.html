@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>The Harvest Manifesto</title>
+        <meta name="description" content="The Harvest Manifesto">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -38,9 +38,9 @@
             
             <p>Complex is more attractive sounding, but even simple data models can benefit from a really good data access layer API.</p>
 
-            <h3>Perceivably "flat" data access layer</h3>
+            <h3>Perceivably <em>flat</em> data access layer</h3>
 
-            <p>It is simpler to choose/search from a list of items than to attempt to traverse a relational data model or document store. Many times you simply *don't know* what you're looking for or when you do, you don't (and shouldn't) know where to look.</p>
+            <p>It is simpler to choose/search from a list of items than to attempt to traverse a relational data model or document store. Many times you simply <em>don't know</em> what you're looking for or when you do, you don't (and shouldn't) know where to look.</p>
 
             <h3>Descriptive metadata (and domain specificity)</h3>
 
@@ -51,11 +51,11 @@
 
             <h3>Expand the search by including the data itself</h3>
 
-            <p>To make the search more robust, discreate data can be indexed and associated with each data point as well. As an example, if I type "male", the available query or view options may result in "gender". This enables users to find what they are looking for by directly searching for the a known data value. One caveat to this is regarding permissions. If certain end are not allowed to view certain data, a match occuring from typing "male" would potentially mean there are "male" data values.</p>
+            <p>To make the search more robust, discreate data can be indexed and associated with each data point as well. As an example, if I type <code>male</code>, the available query or view options may result in <code>gender</code>. This enables users to find what they are looking for by directly searching for the a known data value. One caveat to this is regarding permissions. If certain end are not allowed to view certain data, a match occuring from typing <code>male</code> would potentially mean there are <code>male</code> data values.</p>
 
             <h3>Humans aren't constrained, databases schemas are (and for good reason)</h3>
 
-            <p>Databases have *data types* to allow for fast and effective search on data. Fo example, you cannot query the string "hello world" using a numerical operator (as least in a way that makes sense). For this reason, data are split up into multiple fields suting the needs of the data. For example when you view a cooking recipe, you would expect to read an ingredient such as "2 teaspoons of salt". What would happen if you only knew the ingredient name i.e. "salt"? You wouldn't know *how much* of the ingredient you need. Likewise if you only saw "teaspoons" without "2", you would not know the quantity of "salt" to add.</p>
+            <p>Databases have <em>data types</em> to allow for fast and effective search on data. For example, you cannot query the string <code>hello world</code> using a numerical operator (as least in a way that makes sense). For this reason, data are split up into multiple fields suting the needs of the data. For example when you view a cooking recipe, you would expect to read an ingredient such as <em>2 teaspoons of salt</em>. What would happen if you only knew the ingredient name i.e. <em>salt</em>? You wouldn't know <em>how much</em> of the ingredient you need. Likewise if you only saw <em>teaspoons</em> without <em>2</em>, you would not know the quantity of <em>salt</em> to add.</p>
 
             <p>The power of the database comes from storing and indexing discrete values which enables fast search and sorting capabilities. Humans however need to be able to view these discrete values in way that means something to them.</p>
 
@@ -65,7 +65,7 @@
 
             <h2 id=large>Large Data Sets</h2>
 
-            <p>Large data sets should *only* benefit users in the sense that they have more data to explore.  Similar to the comment on complexity.. small data sets will work just fine here as well.</p>
+            <p>Large data sets should <em>only</em> benefit users in the sense that they have more data to explore.  Similar to the comment on complexity.. small data sets will work just fine here as well.</p>
 
             <h3>Usability must have an O(1) relationship to data size</h3>
 
@@ -73,13 +73,13 @@
 
             <h3>Aggregate statistics</h3>
 
-            <p>Most data should be looked at an aggregate level. If you choose the view "gender" data, the appropriate view is a series aggregate counts for "male", "female" and "unkown". This immediately gives the user a sense of the data. For example, if the are interesting in the "male" population, but the data set only has a few, they can make the decision to continue or not.</p>
+            <p>Most data should be looked at an aggregate level. If you choose the view <code>gender</code> data, the appropriate view is a series aggregate counts for <code>male</code>, <code>femail</code> and <code>unknown</code>. This immediately gives the user a sense of the data. For example, if the are interesting in the <code>male</code> population, but the data set only has a few, they can make the decision to continue or not.</p>
 
             <p>These statistics can be thought of as another set of metadata. This time it's computed from the data itself.</p>
             
             <h3>Distributions graphs</h3>
             
-            <p>This goes hand-in-hand with displaying aggregate statistics. This is particularly important for continuous data where simply listing a bunch of data value counts would be overwhelming. Again, the goal is for a user to *get a sense* of the data before having to query or view it.</p>
+            <p>This goes hand-in-hand with displaying aggregate statistics. This is particularly important for continuous data where simply listing a bunch of data value counts would be overwhelming. Again, the goal is for a user to <em>get a sense</em> of the data before having to query or view it.</p>
 
         </div>
         <script>
