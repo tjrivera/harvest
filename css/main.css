@@ -11,10 +11,8 @@ textarea {
 }
 
 body {
-    font-size: 20px;
-    background-color: #f6f6f6;
-    text-shadow: 0 2px 1px #fff;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.4;
     font-family: georgia, serif;
     color: #333;
 }
@@ -64,34 +62,157 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    background: #f6f6f6 url(../img/grey/grey.png);
+    font-size: 20px;
+    text-shadow: 0 2px 1px #fff;
+    line-height: 1.6;
+    font-family: georgia, serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2, .toc {
+    font-family: 'Fredericka the Great', georgia, serif;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 48px;
+    margin: 20px auto;
+}
+
+h3 {
+    font-size: 24px;
+    color: #666;
+}
+
+a:link, a:visited {
+    color: hsl(210, 35%, 50%);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: hsl(210, 70%, 30%);
+}
+
+hr {
+    margin: 40px 0;
+    border-top: 1px dotted #aaa;
+    border-bottom: 1px dotted #fff;
+}
 
 
+header > * {
+    display: inline-block;
+}
 
+header small {
+    color: #999;
+    font-size: 32px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 16px;
 
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -moz-transform: rotate(-90deg); /* Firefox */
+    -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+    -o-transform: rotate(-90deg); /* Opera */
+    transform: rotate(-90deg);
+}
 
+.headline {
+    font-family: georgia, serif;
+    background-color: #eee;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    box-shadow: 5px 5px 0 #d3d3d3;
+}
 
+#content {
+    margin: 0 auto;
+    padding: 20px;
+    width: 840px;
+}
 
+.toc {
+    margin: 40px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+}
 
-
-
-
-
+.toc li:before {
+    content: "» ";
+    color: #999;
+}
 
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        background-image: url(../img/grey/grey_@2x.png);
+    }
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
 
+/* Landscape phone to portrait tablet */
+@media only screen and (max-width: 979px) {
+    #content {
+        width: auto;
+    }
+    header h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
+ 
+/* Landscape phones and down */
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    header small {
+        bottom: 0;
+        font-size: 24px;
+        line-height: 24px;
+
+        -ms-transform: none; /* IE 9 */
+        -moz-transform: none; /* Firefox */
+        -webkit-transform: none; /* Safari and Chrome */
+        -o-transform: none; /* Opera */
+        transform: none;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .headline {
+        font-size: 20px;
+    }
+
+    .toc {
+        font-size: 24px;
+    }
+}
+
 
 /* ==========================================================================
    Helper classes
@@ -154,101 +275,6 @@ textarea {
 .clearfix {
     *zoom: 1;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-h1, h2, .toc {
-    font-family: 'Fredericka the Great', georgia, serif;
-}
-
-h1 {
-    font-size: 72px;
-}
-
-h2 {
-    font-size: 48px;
-    margin: 40px auto 20px auto;
-}
-
-h3 {
-    font-size: 24px;
-    color: #666;
-}
-
-.hero-unit small {
-    color: #999;
-    font-size: 28px;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    bottom: 8px;
-    right: 14px;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -moz-transform: rotate(-90deg); /* Firefox */
-    -webkit-transform: rotate(-90deg); /* Safari and Chrome */
-    -o-transform: rotate(-90deg); /* Opera */
-    transform: rotate(-90deg);
-}
-
-.headline {
-    font-family: georgia, serif;
-    background-color: #eee;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: 500;
-    box-shadow: 5px 5px 0 #d3d3d3;
-}
-
-#content {
-    margin: 0 auto;
-    padding: 20px;
-    width: 840px;
-}
-
-.toc {
-    margin: 40px 0 0 0;
-    padding: 0;
-    list-style: none;
-    font-size: 30px;
-}
-
-.toc li:before {
-    content: "» ";
-    color: #999;
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 979px) {
-    #content {
-        width: auto;
-    }
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    .hero-unit {
-        font-size: 60px;
-    }
-    .hero-unit small {
-        font-size: 24px;
-        bottom: 6px;
-    }
-    h2 {
-        font-size: 36px;
-    }
-    h3 {
-        font-size: 24px;
-    }
-    .headline {
-        font-size: 20px;
-    }
-    .toc {
-        font-size: 24px;
-    }
-}
-
 
 /* ==========================================================================
    Print styles
