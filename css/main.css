@@ -93,6 +93,14 @@ h3 {
     color: #666;
 }
 
+code {
+    font-family: "monaco", "liberation mono", menlo, monospace;
+    font-size: 16px;
+    box-shadow: 2px 2px 0 #d3d3d3;
+    background-color: #fff;
+    padding: 3px 5px 1px 5px;
+}
+
 a:link, a:visited {
     color: hsl(210, 35%, 50%);
     text-decoration: none;
@@ -103,9 +111,9 @@ a:hover, a:active {
 }
 
 hr {
+    box-shadow: 0 1px 2px #fff;
     margin: 40px 0;
-    border-top: 1px dotted #aaa;
-    border-bottom: 1px dotted #fff;
+    border-top: 1px solid #ddd;
 }
 
 
@@ -146,7 +154,7 @@ header small {
     margin: 40px 0;
     padding: 0;
     list-style: none;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .toc li:before {
